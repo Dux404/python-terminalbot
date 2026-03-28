@@ -1,0 +1,22 @@
+import time
+import datetime
+
+print("Bot online...")
+time.sleep(1)
+
+while True:
+    msg = input("Você: ").lower().strip()
+
+    if msg == "sair":
+        print("Bot: finalmente, silêncio.")
+        break
+
+    elif "oi" in msg:
+        print("Bot: Oi.")
+
+    elif "hora" in msg:
+        agora = datetime.datetime.now()
+        print(f"Bot: São {agora.hour:02d}:{agora.minute:02d}")
+
+    else:
+        print("Bot: Não entendi.")
